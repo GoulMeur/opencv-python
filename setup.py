@@ -48,9 +48,9 @@ def main():
     x64 = sys.maxsize > 2**32
 
     package_name = "opencv-contrib-python"
-	
-	print("installing " + package_name)
-	
+
+    print("installing " + package_name)
+
     # if build_contrib and not build_headless:
         # package_name = "opencv-contrib-python"
 
