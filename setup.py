@@ -41,8 +41,8 @@ def main():
         g.run_command(["submodule", "sync"])
         g.run_command(["submodule", "update", "--init", "--recursive", cmake_source_dir])
 
-        if build_contrib:
-            g.run_command(["submodule", "update", "--init", "--recursive", "opencv_contrib"])
+        # if build_contrib:
+		g.run_command(["submodule", "update", "--init", "--recursive", "opencv_contrib"])
 
     # https://stackoverflow.com/questions/1405913/python-32bit-or-64bit-mode
     x64 = sys.maxsize > 2**32
@@ -116,7 +116,7 @@ def main():
         "-DBUILD_TESTS=OFF",
         "-DBUILD_PERF_TESTS=OFF",
         "-DBUILD_DOCS=OFF"
-    ] + (["-DOPENCV_EXTRA_MODULES_PATH=" + os.path.abspath("opencv_contrib/modules")] if build_contrib else [])
+        "-DOPENCV_EXTRA_MODULES_PATH=" + os.path.abspath("opencv_contrib/modules")]
 
     # OS-specific components
     if (sys.platform == 'darwin' or sys.platform.startswith('linux')) and not build_headless:
