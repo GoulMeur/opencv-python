@@ -37,9 +37,9 @@ if [ -n "$IS_OSX" ]; then
     )
 
     #Contrib adds significantly to project's build time
-    if [ "$ENABLE_CONTRIB" -eq 1 ]; then
-        BREW_TIME_LIMIT=$((BREW_TIME_LIMIT - 10*60))
-    fi
+    # if [ "$ENABLE_CONTRIB" -eq 1 ]; then
+    BREW_TIME_LIMIT=$((BREW_TIME_LIMIT - 10*60))
+    # fi
 
     function generate_ffmpeg_formula {
         local FF="ffmpeg"
