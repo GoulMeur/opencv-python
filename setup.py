@@ -42,7 +42,7 @@ def main():
         g.run_command(["submodule", "update", "--init", "--recursive", cmake_source_dir])
 
         # if build_contrib:
-		g.run_command(["submodule", "update", "--init", "--recursive", "opencv_contrib"])
+        g.run_command(["submodule", "update", "--init", "--recursive", "opencv_contrib"])
 
     # https://stackoverflow.com/questions/1405913/python-32bit-or-64bit-mode
     x64 = sys.maxsize > 2**32
